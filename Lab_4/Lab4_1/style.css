@@ -1,0 +1,40 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+    border: 2px;
+}
+
+p{
+    color: green;
+    text-align: center;
+}
+div{
+    text-align: justify;
+}
+
+.red{
+    color: red;
+}
+
+.white_spacing{
+    white-space: nowrap;
+}
+.text-shadow{
+    text-shadow: 5px -5px 3px lightgreen;
+}
+.div1{
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.div2{
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
+
+#italic_important{
+    font-style: italic;
+    font-weight: bold;
+}

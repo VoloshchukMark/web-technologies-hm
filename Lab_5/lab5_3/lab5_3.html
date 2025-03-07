@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <footer>
+        <div>
+            <span class="tabs" id="logo">Voloshchuk Inc.</span>
+            <span class="tabs">Home</span>
+            <span class="tabs">Research</span>
+            <span class="tabs">Create</span>
+
+            <span class="authentication">
+                <span class="tabs" id="log-in">Log in</span>
+                <span class="tabs" id="sign-up">Sign up</span>
+            </span>
+        </div>
+    </footer>
+
+    <main>
+        <h1> <span> Анкета студента </span> </h1>
+
+        <form action="current_page_url" method="get">
+            <fieldset >
+                <legend> Особисті дані </legend>
+                <label for="full name"> Повне ім'я </label>
+                <input  type="text" id="insert" name="full name" placeholder="Введіть ваше ПІБ" required >
+                <!-- <textarea name="comments" id="comments" rows="4" cols="50"></textarea> -->
+    
+                <label for="password" > Пароль </label>
+                <input  type="password" id="insert" name="password" placeholder="Введіть пароль" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+                <p style="margin-top: 0%; margin-bottom: 20px; color: rgb(184, 183, 183);"> <small>*Пароль повинен складатися з 6 символів, малих літер a-z, великих A-Z та мінімум однієї цифри.</small> </p>
+    
+                <label for="email" > Електронна пошта </label>
+                <input  type="email" name="email" id="insert" placeholder="Example: example@gmail.com" 
+                autocomplete="off" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"">
+    
+                <label for="phone" >Мобільний телефон</label>
+                <input  type="tel" name="phone" id="insert" placeholder="Example: +30978707575" pattern="^\+?3?8?(0\d{9})$" required>
+    
+                <label for="dob" >Дата народження</label>
+                <input  type="date" name="dob" id="insert" required>
+    
+                <label for="sex" > Стать </label>
+                <label id="radio"> <input id="radio-checker" type="radio" name="gender" value="male"> Чоловік </label>
+                <label id="radio"> <input id="radio-checker" type="radio" name="gender" value="female"> Жінка </label>
+                <label id="radio"> <input id="radio" type="radio" name="gender" value="other"> Інше </label>
+            </fieldset>
+    
+            <fieldset>
+                <legend> Місце перебування </legend>
+                <label for="country" >Оберіть країну в якій перебуваєте на постійному проживанні:</label>
+                <select  id="country" name="country">
+                    <option value="Ukraine">Україна</option>
+                    <option value="Poland">Польша</option>
+                    <option value="Dolchland" selected>Германія</option>
+                    <option value="UK">Великобританія</option>
+                    <option value="Canada">Канада</option>
+                    <option value="Romania">Румунія</option>
+                    <option value="Canada">Канада</option>
+                    <option value="Italia">Італія</option>
+                    <option value="Other">Інше</option>
+                </select>
+    
+                <label for="region">Введіть область звідки ви родом (опціонально):</label>
+                <input  list="region-options" id="insert" name="region">
+                <datalist id="region-options">
+                    <option value="АР Крим">
+                    <option value="Вінницька">
+                    <option value="Волинська">
+                    <option value="Дніпропетровська">
+                    <option value="Донецька">
+                    <option value="Житомирська">
+                    <option value="Закарпатська">
+                    <option value="Запорізька">
+                    <option value="Івано-Франкавська">
+                    <option value="Київська">
+                    <option value="Кіровоградська">
+                    <option value="Луганська">
+                    <option value="Львівська">
+                    <option value="Миколаївська">
+                    <option value="Одеська">
+                    <option value="Полтавська">
+                    <option value="Рівенська">
+                    <option value="Сумська">
+                    <option value="Тернопільська">
+                    <option value="Харківська">
+                    <option value="Херсонська">
+                    <option value="Хмельницька">
+                    <option value="Черкаська">
+                    <option value="Чернівецька">
+                    <option value="Чернігівська">
+                </datalist>
+            </fieldset>
+    
+            <fieldset>
+                <legend> Хобі та Освіта </legend>
+                <label for="hobby" > Хобі </label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="drawing">Малювання</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="sport">Спорт</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="reading">Читання</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="videogames">Відеоігри</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="cooking">Кулінарія</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="music">Музика</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="programming">Програмування</label>
+                <label id="radio"> <input type="checkbox" name="hobby" value="other">Інше</label>
+    
+                <label for="lang">Оберіть мови програмування, якими добре володієте:</label>
+                <select  id="lang" name="lang" multiple>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="Java Script">Java Script</option>
+                    <option value="Python">Python</option>
+                    <option value="Other">Інше</option>
+                </select>
+    
+                <label for="specialty">Оберіть свою кафедру:</label>
+                <select  id="specialty" name="specialty">
+                    <optgroup label="Навчально-науковий інститут біології, хімії та біоресурсів">
+                        <option value="1-1">Кафедра біохімії та біотехнології</option>
+                        <option value="1-2">Кафедра ботаніки та природоохоронної діяльності</option>
+                        <option value="1-3">Кафедра екології та біомоніторингу</option>
+                        <option value="1-4">Кафедра хімії та експертизи харчової продукції</option>
+                        <option value="1-5">Інше</option>
+                    </optgroup>
+                    <optgroup label="Навчально-науковий інститут фізико-технічних та комп'ютерних наук">
+                        <option value="1-1">Кафедра електроніки і енергетики</option>
+                        <option value="1-2">Кафедра кореляційної оптики</option>
+                        <option value="1-3">Кафедра радіотехніки та інформаційної безпеки</option>
+                        <option value="1-4">Кафедра комп'ютерних наук</option>
+                        <option value="1-5">Кафедра програмного забезпечення комп'ютерних систем</option>
+                        <option value="1-6">Інше</option>
+                    </optgroup>
+                    <optgroup label="Факультет архітектури, будівництва та декоративно-прикладного мистецтва">
+                        <option value="1-1">Кафедра архітектури та збереження об'єктів Всесвітньої спадщини ЮНЕСКО</option>
+                        <option value="1-2">Кафедра будівництва</option>
+                        <option value="1-3">Кафедра декоративно-прикладного та образотворчного мистецтва</option>
+                        <option value="1-4">Кафедра містобудування та урбаністики</option>
+                    </optgroup>
+                    <optgroup label="Факультет іноземних мов">
+                        <option value="1-1">Кафедра англійської мови</option>
+                        <option value="1-2">Кафедра германської філології та перекладу</option>
+                        <option value="1-3">Кафедра іноземних мов для гуманітарних факультетів</option>
+                        <option value="1-4">Кафедра іноземних мов для природничих факультетів</option>
+                        <option value="1-5">Кафедра комунікативної лінгвістики та перекладу</option>
+                        <option value="1-6">Кафедра романської філології та перекладу</option>
+                    </optgroup>
+                </select>
+    
+                <label>Форма навчання</label>
+                <label id="radio"> <input type="radio" name="form" value="full-time" checked> Денна </label>
+                <label id="radio"> <input type="radio" name="form" value="part-time"> Заочна </label>
+                <label id="radio"> <input type="radio" name="form" value="distance"> Дистанційна </label>
+                <label id="radio"> <input type="radio" name="form" value="dual"> Дуальна </label>
+            </fieldset>
+    
+            <fieldset style="text-align: left; color: rgb(126, 120, 120); border-color: rgb(219, 219, 219);">
+                <legend> Аудіо </legend>
+                <label for="audio" >Вставте свою улюблену пісню👉👈</label>
+                <input  type="file" accept="audio/*" multiple>
+            </fieldset>
+    
+            <fieldset style="text-align: left; color: rgb(126, 120, 120); border-color: rgb(219, 219, 219);">
+                <legend>Дії</legend>
+                <button type="submit">Надіслати</button>
+                <button type="reset">Скинути</button>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

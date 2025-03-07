@@ -1,0 +1,15 @@
+div{
+    width: 1140px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: yellow;
+}
+
+.yes{
+    background-color: orange;
+    column-count: 3;
+    column-gap: 35px;
+    column-width: 100px;
+    column-rule: 5px dotted red;
+}

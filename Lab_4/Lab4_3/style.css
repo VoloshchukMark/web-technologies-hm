@@ -1,0 +1,31 @@
+a{
+    color: purple;
+}
+a:hover{
+    color: rgb(211, 53, 153)
+}
+ol{
+    list-style-position: inside;
+}
+
+li > ul > li{
+    list-style-type: none;
+}
+
+.green{
+    color: green;
+}
+.ununderline a{
+    text-decoration: none;
+}
+.square_list li{
+    list-style-type: square;
+}
+.verify_list li{
+    list-style-type: square;
+    /* list-style-image: url('/Lab4_3/verify.png'); */
+}
+.none{
+    color: black;
+}
+

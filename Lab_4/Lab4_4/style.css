@@ -1,0 +1,38 @@
+p.text-background span{
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+div *.text-background span{
+    background-color: yellow;
+}
+span span{
+    background-color: grey;
+    text-decoration: line-through;
+}
+ol span span{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+section > p{
+    text-shadow: 3px 3px 5px rgb(118, 32, 60);
+    text-indent: 40px;
+}
+div > p.text-background{
+    word-spacing: 50px;
+}
+div.bold > p{
+    font-weight: bold;
+}
+section > div.bold p{
+        line-height: 45px;
+}
+img + p{
+    background-color: brown;
+}
+section ~ p{
+    color: red;
+}
+li > ul{
+    list-style-image: url("/Lab4_3/verify.png");
+} 

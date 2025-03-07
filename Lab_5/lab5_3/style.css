@@ -1,0 +1,129 @@
+main{
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/spikes.webp");
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+h1{
+    text-align: center; 
+    padding-top: 5%;
+    margin-top: 0%;
+    margin-bottom: 40px;
+}
+h1 > span{
+    padding: 10px 20px 10px 20px;
+    border: 2px solid rgb(196, 193, 208);
+    border-radius: 5px;
+    background: linear-gradient(rgb(214, 218, 234), rgb(214, 215, 234));
+    border-style: dashed;
+    color: rgb(72, 72, 86);
+}
+footer > div{
+    background-image: url(../../Lab_2/Obj_2/VolosMark_logo.png);
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+    background-size: 50px 50px;
+
+    background-color: rgb(217, 221, 244);
+    padding: 20px 20px 20px 20px;
+    border-bottom: 3px solid rgb(181, 176, 203);
+    margin-bottom: 0px;
+
+    font-family: sans-serif;
+}
+form{
+    width: 40%; 
+    margin: auto;
+}
+fieldset{
+    text-align: left; 
+    border-color: rgb(219, 219, 219); 
+    border-radius: 0px 0px 20px 10px;
+    margin-top: 20px;
+    background-color: rgb(233, 236, 240);
+}
+legend{
+    display: block;
+    background-color: rgb(223, 223, 239);
+    border: 1px solid;
+    border-radius: 10px 10px 0px 0px;
+    background-position: 2px;
+
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+    color: rgb(108, 111, 114); 
+    font-size: 20px;
+    font-weight: bold;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; 
+    color: rgb(74, 69, 69);
+}
+input[id="insert"], select{
+    width: 100%;
+    padding: 10px; 
+    margin-bottom: 10px; 
+    box-sizing: border-box;
+}
+button{
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+    border: none; 
+    border-radius: 4px; 
+    font-size: 16px;
+    width: 100px;
+    font-weight: 500;
+    cursor: pointer;
+}
+button[type="submit"]{
+    background-color: rgb(185, 168, 223);
+}
+button[type="reset"]{
+    background-color: rgb(229, 228, 228);
+}
+
+
+
+
+.tabs{
+    padding-left: 40px;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.authentication{
+    float: right;
+    margin-top: 10px;
+    
+}
+span > .tabs{
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+
+#logo{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(122, 41, 117);
+}
+#log-in{
+    color: black;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+#sign-up{
+    color: white;
+    background-color: black;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px 10px 10px 10px;
+}
+#radio{
+    font-weight: lighter;
+}
+
+

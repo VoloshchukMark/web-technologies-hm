@@ -1,0 +1,52 @@
+div{
+    font-size: larger;
+    text-align: center;
+}
+h1{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 7;
+    color: red;
+}
+h2{
+    font-weight: bold;
+    font-style: italic;
+}
+main{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+hr{
+    align-content: center;
+    background-color: green;
+    color: green;
+    width: 40%;
+    height: 5px;
+}
+footer{
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: grey;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.block{
+    display: block;
+    margin-top: 0px;
+}
+.term{
+    font-weight: bold;
+}
+.desc{
+    font-size: smaller;
+}
+.underline{
+    text-decoration: underline;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.yellow{
+    background-color: yellow;
+}

@@ -1,0 +1,83 @@
+div{
+    display: block;
+    margin: auto;
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 5px 30px 20px 0px;
+    color: white;
+    font-family: sans-serif;
+}
+h1{
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+ul{
+    list-style-position: inside;
+    list-style: none;
+    padding-left: 30px;
+}
+div > ul > li{
+    background-color: rgb(103, 158, 128);
+    padding: 0px 20px 0px 20px;
+}
+li > ul > li{
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    margin-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 0px;
+}
+span{
+    padding: 10px 20px 10px 20px;
+    display: inline-block;
+}
+li > ul > span{
+    font-size: 20px;
+    font-weight:700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+ul > li > span{
+    background-color: rgb(218, 106, 32);
+}
+
+.icon{
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;
+}
+
+#icon-rule {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/rule.svg");
+    background-position: 5px 0px;
+    background-repeat: no-repeat;
+}
+#icon-ad {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/ad_units.svg");
+}
+#icon-airplane-ticket {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/airplane_ticket.svg");
+}
+#icon-hotel {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/hotel.svg");
+}
+#icon-car-rental {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/car_rental.svg");
+}
+#icon-car-rental {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/car_rental.svg");
+}
+#icon-local-bar {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/local_bar.svg");
+}
+#icon-casino {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/casino.svg");
+}
+#icon-museum {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/museum.svg");
+}
+#icon-festival {
+    background-image: url("../../../../Web_Technology/web-technologies_hw/Lab_5/images/icons/festival.svg");
+}
