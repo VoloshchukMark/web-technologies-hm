@@ -1,4 +1,4 @@
-function gradeRating1(grade){
+function getGrade(grade){
     if (grade >= 0 && grade <= 3){
         console.log("Bad!");
     }else if (grade <= 6){
@@ -13,7 +13,7 @@ function gradeRating1(grade){
     return;
 }
 
-function gradeRating2(grade){
+function getGradeLogging(grade){
     grade >= 0 && grade <= 3 ? console.log("Bad!") :
     grade <= 6 ? console.log("Acceptable") :
     grade <= 9 ? console.log("Good") :
@@ -22,7 +22,7 @@ function gradeRating2(grade){
 }
 
 
-function monthDisplay1(num){
+function displaySeason(num){
     if (num == 12 || num >= 1 && num <= 2){
         console.log("Winter!");
     }else if (num >= 3 && num <= 5){
@@ -37,7 +37,7 @@ function monthDisplay1(num){
     return;
 }
 
-function monthDisplay2(num){
+function displayMonthInStringValue_operatorQuestionMark(num){
     num == 12 || num >= 1 && num <= 2 ? console.log("Winter!") :
     num >= 3 && num <= 5 ? console.log("Spring!") :
     num >= 6 && num <= 8 ? console.log("Summer!") :
@@ -47,8 +47,8 @@ function monthDisplay2(num){
 }
 
 
-gradeRating1(13);
-gradeRating2(8);
+rateTheGrade_operatorIfElse(13);
+rateTheGrade_operatorQuestionMark(8);
 
-monthDisplay1(5);
-monthDisplay1(-1);
+displayMonthInStringValue_operatorIfElse(5);
+displayMonthInStringValue_operatorQuestionMark(-1);

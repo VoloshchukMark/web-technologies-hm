@@ -1,32 +1,32 @@
 function findMaxAndMin(arr){
-    let max = arr[0];
-    let min = arr[0];
+    let maxValue = arr[0];
+    let minValue = arr[0];
 
     for(let i = 1; i < arr.length; i++){
-        if (arr[i] > max){
-            max = arr[i];
+        if (arr[i] > maxValue){
+            maxValue = arr[i];
         }
-        if (arr[i] < min){
-            min = arr[i]
+        if (arr[i] < minValue){
+            minValue = arr[i]
         }
     }
-    return [max, min];
+    return [maxValue, minValue];
 }
 
-function compareObjects(obj1, obj2){
+function compareTwoObjects(obj1, obj2){
     return JSON.stringify(obj1) ===  JSON.stringify(obj2)
 }
 
-let arr = [1, 2, 3, 4, 5, 6];
-let maxMin = findMaxAndMin(arr);
-let max = maxMin[0];
-let min = maxMin[1];
-console.log("Max value: " +  max + ", Min value: " + min);
+let array = [4, 2, 3, 4, 1, 6];
+let maxAndMinValues = findMaxAndMin(array);
+let maxValue = maxAndMinValues[0];
+let minValue = maxAndMinValues[1];
+console.log("Max value: " +  maxValue + ", Min value: " + minValue);
 
-console.log("\n");
+console.log();
 
 const obj1 = {name: 'Mark', age:19};
 const obj2 = {name: 'Mark', age:19};
 const obj3 = {name: 'Serhiy', age:19};
-console.log(compareObjects(obj1, obj2));
-console.log(compareObjects(obj1, obj3));
+console.log(compareTwoObjects(obj1, obj2));
+console.log(compareTwoObjects(obj1, obj3));

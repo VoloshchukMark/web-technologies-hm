@@ -1,5 +1,9 @@
-let object = document.querySelector("p")[0]
+let paragraph = document.querySelector("p")
+let button = document.getElementById("button")
 
-function doubleClickEvent(studentName){
-    alert(studentName);
+function showAlert(){
+    const name = 'Mark'
+   paragraph.innerHTML=name
 };
+
+button.addEventListener("dblclick", showAlert)

@@ -1,4 +1,4 @@
-function sumOf50Int(){
+function findSumOf50Integers(){
     let i = 1;
     let result = 0;
     while(i <= 50){
@@ -7,7 +7,7 @@ function sumOf50Int(){
     return result;
 }
 
-function factorial(num){
+function findFactorial(num){
     if(num == 0) {return 1;}
     for(let i = num - 1; i > 0; i--){
         num *= i;
@@ -15,7 +15,7 @@ function factorial(num){
     return num;
 }
 
-function monthDisplay(num){
+function displayMonth(num){
     switch(num){
         case 1:
             return 'January';
@@ -46,7 +46,7 @@ function monthDisplay(num){
     }
 }
 
-function oddNumbers(arr){
+function findSumOfOddNumbers(arr){
     let sum = 0;
     for (const num of arr){
         if (num % 2 == 0){
@@ -57,29 +57,30 @@ function oddNumbers(arr){
 }
 
 let vowelsCheck = (stringValue) => {
-    let amount = 0;
-    for (let i = 0; i < stringValue.length; i++){
-        if(['a', 'e', 'u', 'i', 'o'].includes(stringValue[i])){
-            amount++;
+    let lowerCaseStringValue = stringValue.toLowerCase()
+    let amountOfVowels = 0;
+    for (let i = 0; i < lowerCaseStringValue.length; i++){
+        if(['a', 'e', 'u', 'i', 'o'].includes(lowerCaseStringValue[i])){
+            amountOfVowels++;
         }
     }
-    return amount;
+    return amountOfVowels;
 }
 
-function degreeOfANumber(base, exponent){
+function findDegree(number, degree){
     let result = 1;
-    if(exponent == 0){ return 1; }
-    while(exponent != 0){
-        result *= base;
-        exponent--;
+    if(degree == 0){ return 1; }
+    while(degree != 0){
+        result *= number;
+        degree--;
     }
     return result;
 }
 
 
-console.log("1. " + sumOf50Int());
-console.log("2. " + factorial(5));
-console.log("3. " + monthDisplay(5));
-console.log("4. " + oddNumbers([1, 2, 3, 4, 5, 6, 7, 8]));
-console.log("5. " + vowelsCheck('MakaPopka'));
-console.log("6 " + degreeOfANumber(5, 3));
+console.log("1. " + findSumOf50Integers());
+console.log("2. " + findFactorial(5));
+console.log("3. " + displayMonth(5));
+console.log("4. " + findSumOfOddNumbers([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log("5. " + vowelsCheck('Alphabet'));
+console.log("6. " + findDegree(5, 3));
