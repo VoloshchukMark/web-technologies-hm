@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory game</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>The game “Find a match”</h1>
+
+    <div class="settings">
+        <h2>Settings</h2>
+        <div class="setting-component">
+            <label for="rows">Rows:</label>
+            <input type="number" id="rows" min="2" max="10" value="4">
+        </div>
+        <div class="setting-component">
+            <label for="cols">Columns:</label>
+            <input type="number" id="cols" min="2" max="10" value="4">
+        </div>
+        <div class="setting-component">
+            <label for="difficulty">Difficult:</label>
+            <select id="difficulty">
+                <option value="easy">Easy (3 min)</option>
+                <option value="normal">Normal (2 min)</option>
+                <option value="hard">Hard (1 min)</option>
+            </select>
+        </div>
+        <div class="buttons-container">
+            <button id="start-game-btn">Start game</button>
+            <button id="reset-settings-btn">Reset settings</button>
+        </div>
+    </div>
+    
+    <div class="game-info">
+        <div id="timer-container">Time: <span id="timer">00:00</span></div>
+        <div id="moves-container">Moves: <span id="moves">0</span></div>
+    </div>
+
+    <section class="memory-game">
+        </section>
+
+    <div id="game-over-message" class="hidden">
+        <h2>Game over!</h2>
+        <p id="final-stats"></p>
+        <button id="restart-game-btn">Play again</button>
+    </div>
+
+    <script src="script.js" ></script>
+
+</body>
+</html>
