@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Finder App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="signup">Registration</button>
+                <button class="tab-button" data-tab="login">Authorization</button>
+            </div>
+
+            <div id="signup" class="tab-content active">
+                <h2>Sign up</h2>
+                <form id="signupForm">
+                    <div class="form-group">
+                        <label for="firstName">firstname:</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your firstname">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Surname:</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your lastname">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="signupPassword">Password:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="signupPassword" name="signupPassword" placeholder="Enter your password">
+                            <span class="toggle-password"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm password:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                            <span class="toggle-password"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateBirth">Date of birth:</label>
+                        <input type="date" id="dateBirth" name="dateBirth">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sex:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="sex" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="sex" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option value="">Choose your country...</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="USA">USA</option>
+                            <option value="Germany">Germany</option>
+                        </select>
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <select id="city" name="city" disabled>
+                            <option value="">Choose your city...</option>
+                        </select>
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+                    
+                    <button type="submit">Sign up</button>
+                </form>
+                <div id="signupSuccessMessage" class="success-message"></div>
+            </div>
+
+            <div id="login" class="tab-content">
+                <h2>Log in</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email:</label>
+                        <input type="email" id="loginEmail" name="loginEmail" placeholder="Enter your email">
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password:</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password">
+                            <span class="toggle-password"><i class="far fa-eye"></i></span>
+                        </div>
+                        <span class="validation-icon"></span>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit">Log in</button>
+                </form>
+                <div id="loginSuccessMessage" class="success-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-app-wrapper hidden">
+        <header class="app-header">
+            <h1>Social Friends Finder</h1>
+            <div class="header-controls">
+                <div class="user-profile">
+                    <span id="loggedInUserNameDisplay" class="logged-in-user-name"></span>
+                </div>
+                <button id="logoutButton" class="logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </header>
+
+        <main class="app-content">
+            <div class="controls-panel">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search users by name, email, or location...">
+                </div>
+
+                <div class="filters-sort-panel">
+                    <select id="sortBy" class="control-select">
+                        <option value="">Sort by...</option>
+                        <option value="name_asc">Name (A-Z)</option>
+                        <option value="name_desc">Name (Z-A)</option>
+                        <option value="age_asc">Age (Asc)</option>
+                        <option value="age_desc">Age (Desc)</option>
+                        <option value="registered_asc">Registration Date (Asc)</option>
+                        <option value="registered_desc">Registration Date (Desc)</option>
+                    </select>
+
+                    <select id="genderFilter" class="control-select">
+                        <option value="">All Genders</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <select id="countryFilter" class="control-select">
+                        <option value="">All Countries</option>
+                    </select>
+
+                    <input type="number" id="minAgeFilter" class="control-input" placeholder="Min Age">
+                    <input type="number" id="maxAgeFilter" class="control-input" placeholder="Max Age">
+                    <button id="clearFiltersButton" class="clear-filters-button">Clear Filters</button>
+                </div>
+            </div>
+
+            <div id="globalErrorMessage" class="message-box error-box hidden"></div>
+            <div id="loadingIndicator" class="message-box loading-box hidden">
+                <i class="fas fa-spinner fa-spin"></i> Loading users...
+            </div>
+            <div id="noResultsMessage" class="message-box info-box hidden">No users found matching your criteria.</div>
+
+            <div id="userCardsContainer" class="user-cards-grid">
+            </div>
+
+            <div class="pagination-container">
+                <div id="paginationNumbers" class="pagination-numbers">
+                </div>
+                <button id="loadMoreButton" class="load-more-button hidden">Load More <i class="fas fa-arrow-down"></i></button>
+            </div>
+
+            <section class="favorite-friends-section">
+                <h2>Your Favorite Friends</h2>
+                <div id="favoriteFriendsContainer" class="user-cards-grid favorite-grid">
+                </div>
+                <div id="noFavoritesMessage" class="message-box info-box">No favorite friends yet. Add some!</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

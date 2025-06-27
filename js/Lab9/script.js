@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     function clearFormAndValidation(form) {
         form.reset();
         form.querySelectorAll('.form-group').forEach(group => {
